@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<title>CoinSlider</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="coin slider/coin-slider-styles.css" type="text/css" />
+
+<div id="cont">
+
+<script type="text/javascript" src="coin slider/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="coin slider/coin-slider.min.js"></script>
+
+<div id='coin-slider'>
+    <a href="" target="_blank">
+        <img src='images/promo_extra.jpg' >
+        <span>
+            Extra, Extra, Extra!! Tem ofertas chegando ai!
+        </span>
+    </a>
+
+    <a href="" target="_blank">
+        <img src='images/promo_paodeacucar.jpg' >
+        <span>
+            A Black Fryday chegou com tudo no Pão de Açúcar 
+        </span>
+    </a>	
+
+    <a href="" target="_blank">
+        <img src='images/promo_zaffari.jpg' >
+        <span>
+            Produtos com preços imperdíveis, só no Záffari
+        </span>
+    </a>	
+
+    <a href="" target="_blank">
+        <img src='images/promo_criatividade.jpg' >
+        <span>
+            Sei la, acabou a criatividade XD
+        </span>
+    </a>	
+</div>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('#coin-slider').coinslider({ width: 600, height:200, navigation: true, delay: 5000 });
+  });
+</script>
+
+</html>

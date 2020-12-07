@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lista dinamica</title>
+</head>
+<body>
+
+<div id='container'></div>
+
+<script>
+
+    var arr = ['batata', 'açucar', 'beterraba', 'couve-flor', 'morango'];
+    var cont = document.getElementById('container');
+
+    conta = [1,2,3,4,5];
+    // create ul element and set the attributes.
+    var ul = document.createElement('ul');
+    ul.setAttribute('style', 'padding: 0; margin: 0; color: #23211f;');
+    ul.setAttribute('id', 'theList');
+
+    for (i = 0; i <= arr.length - 1; i++) {
+        
+        var li = document.createElement('li');     // create li element.
+        li.innerHTML = arr[i];      // assigning text to li using array value.
+        li.setAttribute('style', 'display : flex; flex-direction: row; padding: 20px; margin-bottom: 10px; border: 3px solid #23211f; border-radius: 40px/40px;');  // remove the bullets.
+
+        var div = document.createElement('div');
+        div.innerHTML = "";
+        div.setAttribute('class','conjunto');
+        div.setAttribute('style','position: relative; display : flex; flex-direction: row; padding-left: 70%;');
+
+        var button1 = document.createElement('button');
+        button1.innerHTML = "&#8722;";
+        button1.setAttribute('class','minus','&#8722;');
+        button1.setAttribute('onclick','minus_counter()')
+
+        var div_contador = document.createElement('div');
+        div_contador.innerHTML = conta[i];
+        div_contador.setAttribute('class','contador');
+        div_contador.setAttribute('style',' padding-left: 50% ; padding-right: 50% ;');
+
+        var button = document.createElement('button');
+        button.innerHTML = "&#43";
+        button.setAttribute('class','plus','&#43;');
+        button.setAttribute('onclick','plus_counter()')
+
+        div.appendChild(button1);
+        div.appendChild(div_contador);
+        div.appendChild(button);
+        li.appendChild(div);        
+        ul.appendChild(li);     // append li to ul.
+
+
+    cont.appendChild(ul);       // add list to the container.
+      
+    }
+
+    function plus_counter(){
+      conta[i]++;
+      display_counter.innerHTML = conta[i];
+    }
+
+    function plus_counter(){
+      conta[i]--;
+      display_counter.innerHTML = conta[i];
+    }
+
+
+    function addItem(){
+        var ul = document.getElementById("container");
+        var candidate = document.getElementById("candidate");
+        var li = document.createElement("li");
+        li.setAttribute('id',candidate.value);
+        li.appendChild(document.createTextNode(candidate.value));
+        ul.appendChild(li);
+    }
+    
+    function removeItem1(){
+        var ul = document.getElementById("dynamic-list");
+        var candidate = document.getElementById("candidate");
+        var item = document.getElementById(candidate.value);
+        ul.removeChild(item);
+    }
+
+</script>
+    
+
+
+
+<ul id="dynamic-list"></ul>
+
+<button onclick="addItem1()">add item</button>
+<button onclick="removeItem1()">remove item</button>
+
+<script>   
+    
+    function addItem1(){
+        var ul = document.getElementById("container");
+        var candidate = document.getElementById("candidate");
+        var li = document.createElement("li");
+        li.setAttribute('id',candidate.value);
+        li.appendChild(document.createTextNode(candidate.value));
+        ul.appendChild(li);
+    }
+    
+    function removeItem1(){
+        var ul = document.getElementById("dynamic-list");
+        var candidate = document.getElementById("candidate");
+        var item = document.getElementById(candidate.value);
+        ul.removeChild(item);
+    }
+    
+    </script>
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    ul li {
+      border: 1px solid #ddd;
+      margin-top: -1px; /* Prevent double borders */
+      background-color: #f6f6f6;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      color: black;
+      display: block;
+      position: relative;
+    }
+    
+    ul li:hover {
+      background-color: #eee;
+    }
+    
+    .close {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      padding: 12px 16px;
+      transform: translate(0%, -50%);
+    }
+    
+    .close:hover {background: #bbb;}
+    </style>
+
+<script>
+    var closebtns = document.getElementsByClassName("apagar");
+    var i;
+    
+    for (i = 0; i < closebtns.length; i++) {
+      closebtns[i].addEventListener("click", function() {
+        this.parentElement.style.display = 'none';
+      });
+    }
+    </script>
+</body>
+</html>

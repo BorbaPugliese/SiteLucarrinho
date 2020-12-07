@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name =" viewport " content =" width =device -width , initial - scale =1.0">
+<title>Index</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="coin slider/coin-slider-styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <p>Login</p>
+      <a class="close" href="#">&times;</a>
+      <form class="content">
+              <input type="text" name="" placeholder="Nome de usuário" required>
+              <input type="password" name="" placeholder="Senha" required>
+              <input type="submit" name="" value="Entrar">
+              <a link rel="esqueci.html" href="style.css">Esqueci a senha</a>
+          </form>
+    </div>
+  </div>
+
+  <div id="popup2" class="overlay">
+    <div class="popupcad">
+      <h1>Login</h1>
+      <a class="close" href="#">&times;</a>
+      <form class="contentcad">
+          <h1>Cadastrar</h1>
+          <input type="text" name="" placeholder="Nome de usuário" required>
+          <input type="text" name="" placeholder="E-mail" required>
+          <input type="password" name="" placeholder="Senha" required>
+          <input type="password" name="" placeholder="Confirme sua Senha" required>
+          <input type="submit" name="" value="Cadastrar">
+          </form>
+    </div>
+  </div>
+  
+
+  <div class="faixa">
+  <div class="logo"><img src="images/Logo_fino.png" href="index.html" width="95px" height="same-as-width"></div>
+  <div class="nome_principal">Lucarrinho</div>
+  <div class="cantinho_principal">
+    <a class="button" href="#popup1">Login</a>
+    <hr class="traço">
+    <a class="button" href="#popup2">Cadastrar</a>
+  </div>
+  </div>
+
+  <div class="faixaSecundaria">
+
+<center>
+<div id="cont">
+
+<script type="text/javascript" src="coin slider/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="coin slider/coin-slider.min.js"></script>
+
+<div id="coin-slider">
+  
+    <a href="" target="_blank">
+        <img src='images/promo_extra.jpg' >
+        <span>
+            Extra, Extra, Extra!! Tem ofertas chegando ai!
+        </span>
+    </a>
+
+    <a href="" target="_blank">
+        <img src='images/promo_paodeacucar.jpg' >
+        <span>
+            A Black Fryday chegou com tudo no Pão de Açúcar 
+        </span>
+    </a>	
+
+    <a href="" target="_blank">
+        <img src='images/promo_zaffari.jpg' >
+        <span>
+            Produtos com preços imperdíveis, só no Záffari
+        </span>
+    </a>	
+
+    <a href="" target="_blank">
+        <img src='images/promo_criatividade.jpg' >
+        <span>
+            Sei la, acabou a criatividade XD
+        </span>
+    </a>	
+</div>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('#coin-slider').coinslider({ width: 600, height:200, navigation: true, delay: 5000 });
+  });
+</script>
+
+ 
+  </div>
+ </center>
+
+</div>
+</body>
+
+</html>
