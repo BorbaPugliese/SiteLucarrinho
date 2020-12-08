@@ -15,37 +15,198 @@
   <div class="logo"><img src="images/Logo_fino.png" href="index.html" width="95px" height="same-as-width"></div>
   <div class="nome_principal">Lucarrinho</div>
   <div class="cantinho_principal">
-    <a class="nome_usuario">Olá,</a> <!-- nome do cara aqui -->
+    <a>Olá,</a>
+    <a class="nome_usuario">Lucas Borba</a> <!-- nome do usuário aqui -->
     <div class="traço"></div>
     <a class="button" href="">Sair</a>
   </div>
 
   </div>
 
-  <div id='lista_pesquisa'></div>
+
+  <div class="not_faixa">
+  <center>
+    <div>
+    <nav>
+    <ul class="menu">
+                <li><a href="index.html" target="cont">Home</a></li>              
+                <li><a href="Logado_Lista.html" target="_blank">Minhas Listas</a></li>              
+                <li><a href="Logado_Pesquisa.html" target="cont">Pesquisa de preço</a></li> 
+                <li><a href="faleconosco.html" target="cont">Fale conosco</a></li>              
+      </ul>
+    </nav>
+    </div>
+    </center>
+
+  <div class="tres_partes">
+    <hr style="width: 1px; height: auto; margin: 5%;" />
+  <div class="middle">
+    <div id="pesquisa_bar">
+      <input id="pesquisa_texto" type="search" placeholder="Pesquise aqui o item desejado">
+      <div id="pesquisa_lupa">
+        <img src="images/lupa1.png">
+      </div>
+    </div>
+    <div id='container'></div>
+  </div>
+
+    <hr style="width: 1px; height: auto; margin: 5%;" />
+  <div class="last">
+
+    <h2>Minha Lista</h2>
+    <div id="minha_lista"></div>
+  </div> 
+ </div>
+</div>
+</div>
+
 
   <script>
-      var arr = ['batata', 'açucar', 'beterraba', 'couve-flor', 'morango'];
-      var cont = document.getElementById('lista_pesquisa');
   
+      var arr = ['Batata', 'Açucar', 'Beterraba', 'Couve-flor', 'Morango'];
+      var cont = document.getElementById('container');
+  
+      var conta = Array(arr.length).fill(0);
       // create ul element and set the attributes.
       var ul = document.createElement('ul');
-      ul.setAttribute('class','lista');
+      ul.setAttribute('style', 'padding: 0; margin: 0; color: #23211f;');
       ul.setAttribute('id', 'theList');
-  
+
       for (i = 0; i <= arr.length - 1; i++) {
+          
           var li = document.createElement('li');     // create li element.
           li.innerHTML = arr[i];      // assigning text to li using array value.
-          li.setAttribute('class','item');  // remove the bullets.
-
-          var span = document.createElement('span');
-          span.innerHTML = "&times";
-          span.setAttribute('class','close','&times;');
-
-        li.appendChild(span);
-        ul.appendChild(li);     // append li to ul.
+          li.setAttribute('id',"name_food")
+          li.setAttribute('style', 'display : flex; flex-direction: row; padding: 20px; margin-bottom: 10px; border: 3px solid #23211f; border-radius: 40px/40px;');  // remove the bullets.
+  
+          var div = document.createElement('div');
+          div.innerHTML = "";
+          div.setAttribute('class','conjunto');
+          div.setAttribute('style','position: relative; display : flex; flex-direction: row; padding-left: 30%;');
+  
+          var button_minus = document.createElement('button');
+          button_minus.innerHTML = "&#8722;";
+          button_minus.setAttribute('class','minus','&#8722;');
+          button_minus.setAttribute('onclick','minus_current(i)');
+  
+          var div_contador = document.createElement('div');
+          div_contador.innerHTML = conta[i];
+          div_contador.setAttribute('id',i);
+          div_contador.setAttribute('style',' padding-left: 10% ; padding-right: 10% ;');
+  
+          var button_plus = document.createElement('button');
+          button_plus.innerHTML = "&#43";
+          button_plus.setAttribute('class','plus','&#43;');
+          button_plus.setAttribute('onclick','plus_current(i)');
+          button_plus.setAttribute('style','heigth:same-as-width; width: 30px;');
+  
+          var button_addItem = document.createElement('button');
+          button_addItem.innerHTML = "Adicionar";
+          button_addItem.setAttribute('class','button_addItem');
+          button_addItem.setAttribute('style','margin-left: 20%');
+          button_addItem.setAttribute('onClick','addItem()');
+  
+          div.appendChild(button_minus);
+          div.appendChild(div_contador);
+          div.appendChild(button_plus);
+          div.appendChild(button_addItem);
+          li.appendChild(div);        
+          ul.appendChild(li);     // append li to ul.
+  
+      cont.appendChild(ul);       // add list to the container.
+    
+      }
+      
+      function plus_current(i) {
+        var current_counter = document.getElementById(i).innerHTML;
+        current_counter++;
+        document.getElementById(i).innerHTML = current_counter;
+        console.log(current_counter);
       }
   
-      cont.appendChild(ul);       // add list to the lista_pesquisa.
+      function minus_current(i) {
+        var current_counter = document.getElementById(i).innerHTML;
+        current_counter--;
+        if (current_counter<0)
+        current_counter = 0;
+        document.getElementById(i).innerHTML = current_counter;
+        console.log(current_counter);
+      }
+
   </script>
 
+<script>
+
+      var my_list = document.getElementById('minha_lista');
+
+      var ul_myList = document.createElement('ul');
+      ul_myList.setAttribute('style', 'padding: 0; margin: 0; color: #23211f;');
+      ul_myList.setAttribute('id', 'myLista');
+ 
+    //Contruir as matrizes de Nome e Quantidade
+      var  selected_name_myMatrix = [];
+      var  selected_quantity_myMatrix = [];
+
+      for (i = 0; i <= selected_name_myMatrix.length - 1; i++) {
+          
+          var li_myList = document.createElement('li');     // create li element.
+          li_myList.innerHTML = "";      // assigning text to li using array value.
+          li_myList.setAttribute('style','');
+
+          var div_myList = document.createElement('div');
+          div_myList.innerHTML = "";
+          div_myList.setAttribute('class','conjunto_myList');
+          div_myList.setAttribute('style','position: relative; display : flex; flex-direction: row; padding-left: 30%;');
+
+          var nomeItem_myList = document.createElement('div');
+          nomeItem_myList.innerHTML = selected_name_myMatrix[i];
+          nomeItem_myList.setAttribute('id',i);
+          nomeItem_myList.setAttribute('style',' padding-left: 10% ; padding-right: 10% ;');
+
+          var quantidade_myList = document.createElement('div');
+          quantidade_myList.innerHTML = selected_quantity_myMatrix[i];
+          quantidade_myList.setAttribute('id',i);
+          quantidade_myList.setAttribute('style',' padding-left: 10% ; padding-right: 10% ;');
+
+
+          div_myList.appendChild(nomeItem_myList);
+          div_myList.appendChild(quantidade_myList);
+          li_myList.appendChild(div_myList);        
+          ul_myList.appendChild(li_myList); 
+
+        my_list.appendChild(ul_myList);
+
+      }
+
+      function addItem(){
+        
+        var current_name = document.getElementById("name_food").innerText;
+        var current_name_finish = current_name.split("\n", 1);
+
+        var current_quantity = document.getElementById(i).innerHTML;
+
+        //console.log(selected_name_myMatrix.find(current_name_finish));
+
+        //if(selected_name_myMatrix.find(current_name_finish) === current_name_finish){
+         
+         // var index_found = selected_name_myMatrix.findIndex(current_name_finish);
+        //  var somador = selected_quantity_myMatrix(index_found);
+        //  current_quantity = current_quantity + somador;
+        //  selected_quantity_myMatrix[index_found] = current_quantity;
+       // }
+
+      //  else{
+          selected_name_myMatrix.push(current_name_finish);
+          selected_quantity_myMatrix.push(current_quantity);
+       // }
+        
+        console.log(selected_name_myMatrix);
+        console.log(selected_quantity_myMatrix);
+      }
+
+
+
+</script>
+
+
+</body>
