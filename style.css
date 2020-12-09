@@ -260,6 +260,7 @@ h1 {
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
+  z-index: 1002;
 }
 
 .overlay:target {
@@ -521,3 +522,56 @@ ul li:hover {
 
 
 /* Lista de pesquisa*/
+
+/* Logado na Lista*/
+
+#box {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  width: 951px;
+  background-color:#f6f6f6;
+  border: 4px double #202733;
+  padding: 20px;
+  padding-top:40px;
+}
+
+#box .font-body {
+  font-size: 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+#box .blue {
+  color: #f6f6f6;
+  padding-top: 6px;
+}
+
+#box .left {
+  border-right: 4px double #202733;
+  text-align: center;
+  vertical-align: top;
+  width: 300px;
+}
+
+#box .left b {
+  display: block;
+  text-transform: uppercase;
+  color: #202733;
+}
+
+#box .left a {
+  color: #f6f6f6;
+  font-size: 12px;
+  display: block;
+  height: 28px;
+  text-decoration: none;
+  padding-top: 13px;
+}
+
+#box .left a:hover {
+  color: #f6f6f6;
+  text-decoration: underline;
+}
+
+/* Logado na Lista*/

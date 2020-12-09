@@ -44,7 +44,7 @@
     <div id="pesquisa_bar">
       <input id="pesquisa_texto" type="search" placeholder="Pesquise aqui o item desejado">
       <div id="pesquisa_lupa">
-        <img src="images/lupa1.png">
+        <button><img src="images/lupa1.png"></button>
       </div>
     </div>
     <div id='container'></div>
@@ -60,7 +60,6 @@
  </div>
 </div>
 </div>
-
 
   <script>
   
@@ -129,7 +128,7 @@
         var current_counter = document.getElementById(i).innerHTML;
         current_counter--;
         if (current_counter<0)
-        current_counter = 0;
+          current_counter = 0;
         document.getElementById(i).innerHTML = current_counter;
         console.log(current_counter);
       }

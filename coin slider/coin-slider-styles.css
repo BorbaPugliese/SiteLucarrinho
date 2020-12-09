@@ -37,8 +37,9 @@
 }
 
 .cs-title { 
-	width: 580px; 
+	width: 100%; 
 	padding: 10px; 
+	position: relative;
 	background-color: #000000; 
 	color: #FFFFFF; 
 }
