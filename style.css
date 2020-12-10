@@ -526,13 +526,14 @@ ul li:hover {
 /* Logado na Lista*/
 
 #box {
+  margin: 10%;
+  margin-left: 15%;
   display: block;
-  margin: 0 auto;
   height: auto;
-  width: 951px;
+  width: 70%;
   background-color:#f6f6f6;
   border: 4px double #202733;
-  padding: 20px;
+  padding: 2%;
   padding-top:40px;
 }
 
@@ -542,36 +543,62 @@ ul li:hover {
   vertical-align: top;
 }
 
-#box .blue {
-  color: #f6f6f6;
-  padding-top: 6px;
-}
-
 #box .left {
+  position: relative;
   border-right: 4px double #202733;
   text-align: center;
   vertical-align: top;
-  width: 300px;
+  width: 30%;
 }
 
 #box .left b {
   display: block;
   text-transform: uppercase;
-  color: #202733;
+  color: #202733; 
+  text-decoration: none;  
+  font-size: 12px;
+  padding-top: 13px;
 }
 
 #box .left a {
   color: #f6f6f6;
-  font-size: 12px;
-  display: block;
-  height: 28px;
-  text-decoration: none;
-  padding-top: 13px;
 }
 
-#box .left a:hover {
-  color: #f6f6f6;
-  text-decoration: underline;
+#box .left b:hover {
+  color:  #ffea00;
 }
 
 /* Logado na Lista*/
+
+/* Fale Conosco*/
+
+.carometro{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+
+}
+
+.carometro2{
+  display: flex;
+  flex-direction: row;
+}
+
+.moldura{
+  position: relative;
+  width: 200px;
+  margin: 10%;
+  height: 300px;
+  padding-left: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 1%;
+  background-color: rgb(255, 255, 255) ;
+  border: 5px solid #CCC;
+}
+
+
+/* Fale Conosco*/
