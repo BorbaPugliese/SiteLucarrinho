@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lista dinamica</title>
+</head>
+<body>
+
+  
+    <div id='container'></div>
+  
+
+  <script>
+  
+      var arr = ['batata', 'açucar', 'beterraba', 'couve-flor', 'morango'];
+      var cont = document.getElementById('container');
+  
+      var conta = Array(arr.length).fill(0);
+      // create ul element and set the attributes.
+      var ul = document.createElement('ul');
+      ul.setAttribute('style', 'padding: 0; margin: 0; color: #23211f;');
+      ul.setAttribute('id', 'theList');
+  
+      for (i = 0; i <= arr.length - 1; i++) {
+          
+          var li = document.createElement('li');     // create li element.
+          li.innerHTML = arr[i];      // assigning text to li using array value.
+          li.setAttribute('style', 'display : flex; flex-direction: row; padding: 20px; margin-bottom: 10px; border: 3px solid #23211f; border-radius: 40px/40px;');  // remove the bullets.
+  
+          var div = document.createElement('div');
+          div.innerHTML = "";
+          div.setAttribute('class','conjunto');
+          div.setAttribute('style','position: relative; display : flex; flex-direction: row; padding-left: 30%;');
+  
+          var button_minus = document.createElement('button');
+          button_minus.innerHTML = "&#8722;";
+          button_minus.setAttribute('class','minus','&#8722;');
+          button_minus.setAttribute('onclick','minus_current(i)');
+  
+          var div_contador = document.createElement('div');
+          div_contador.innerHTML = conta[i];
+          div_contador.setAttribute('id',i);
+          div_contador.setAttribute('style',' padding-left: 10% ; padding-right: 10% ;');
+  
+          var button_plus = document.createElement('button');
+          button_plus.innerHTML = "&#43";
+          button_plus.setAttribute('class','plus','&#43;');
+          button_plus.setAttribute('onclick','plus_current(i)');
+  
+          var button_addItem = document.createElement('button');
+          button_addItem.innerHTML = "Adicionar";
+          button_addItem.setAttribute('class','button_addItem');
+          button_addItem.setAttribute('style','margin-left: 30%');
+          button_addItem.setAttribute('onClick','addItem()');
+  
+          div.appendChild(button_minus);
+          div.appendChild(div_contador);
+          div.appendChild(button_plus);
+          div.appendChild(button_addItem);
+          li.appendChild(div);        
+          ul.appendChild(li);     // append li to ul.
+  
+      cont.appendChild(ul);       // add list to the container.
+      }
+      
+      function plus_current(i) {
+        var current_counter = document.getElementById(i).innerHTML
+        current_counter++;
+        document.getElementById(i).innerHTML = current_counter;
+        console.log("plus_current(i)")
+      }
+  
+      function minus_current(i) {
+        var current_counter = document.getElementById(i).innerHTML
+        current_counter--;
+        if (current_counter<0)
+        current_counter = 0;
+        document.getElementById(i).innerHTML = current_counter;
+      }
+
+
+
+    function addItem(){
+        var ul = document.getElementById("container");
+        var candidate = document.getElementById("candidate");
+        var li = document.createElement("li");
+        li.setAttribute('id',candidate.value);
+        li.appendChild(document.createTextNode(candidate.value));
+        ul.appendChild(li);
+    }
+    
+    function removeItem1(){
+        var ul = document.getElementById("dynamic-list");
+        var candidate = document.getElementById("candidate");
+        var item = document.getElementById(candidate.value);
+        ul.removeChild(item);
+    }
+
+</script>
+    
+
+<script>
+    var closebtns = document.getElementsByClassName("apagar");
+    var i;
+    
+    for (i = 0; i < closebtns.length; i++) {
+      closebtns[i].addEventListener("click", function() {
+        this.parentElement.style.display = 'none';
+      });
+    }
+</script>
+
+</body>
+</html>
