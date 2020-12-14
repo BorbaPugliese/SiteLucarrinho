@@ -7,8 +7,6 @@ from .views import (
     add_to_cart,
     remove_from_cart,
     remove_single_item_from_cart,
-    FaleConosco,
-    account,
 )
 
 app_name = 'core'
@@ -22,6 +20,4 @@ urlpatterns = [
     path('remove-from-cart/<slug>/', remove_from_cart, name='remove-from-cart'),
     path('remove-item-from-cart/<slug>/', remove_single_item_from_cart,
          name='remove-single-item-from-cart'),
-    path('fale_conosco/', FaleConosco.as_view(), name='fale_conosco'),
-    path('pedidos_anteriores', account, name='pedidos_anteriores')
 ]

@@ -92,15 +92,8 @@ class HomeView(ListView):
     paginate_by = 10
     template_name = "home.html"
 
-class FaleConosco(ListView):
-    model = Item
-    paginate_by = 10
-    template_name = "fale_conosco.html"
 
-class PedAnteriores(ListView):
-    model = Order
-    paginate_by = 10
-    template_name = "pedidosanteriores.html"
+
 
 class OrderSummaryView(LoginRequiredMixin, View):
     def get(self, *args, **kwargs):
@@ -208,9 +201,3 @@ def remove_single_item_from_cart(request, slug):
         messages.info(request, "Você não tem um pedido ativo")
         return redirect("core:product", slug=slug)
 
-@login_required
-def account(request):
-    my_orders = Order.objects.filter(user=request.user)
-    order_items = OrderItem.objects.all()
-    return render(request, "pedidosanteriores.html",
-                  {"my_orders": my_orders, "order_items": order_items})
