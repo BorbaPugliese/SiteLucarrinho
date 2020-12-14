@@ -90,6 +90,7 @@ class Order(models.Model):
     ordered_date = models.DateTimeField()
     ordered = models.BooleanField(default=False)
     envio_option = models.CharField(max_length=20, blank=True, null=True)
+    totalprice = models.FloatField(default=0)
 
     def __str__(self):
         return self.user.username
@@ -135,7 +136,6 @@ class Order(models.Model):
 def userprofile_receiver(sender, instance, created, *args, **kwargs):
     if created:
         userprofile = UserProfile.objects.create(user=instance)
-
 
 
 post_save.connect(userprofile_receiver, sender=settings.AUTH_USER_MODEL)

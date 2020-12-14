@@ -12,7 +12,7 @@ from django.utils import timezone
 from django.views.generic import ListView, DetailView, View
 
 from .forms import CheckoutForm
-from .models import Item, OrderItem, Order, UserProfile, Orders
+from .models import Item, OrderItem, Order, UserProfile
 
 
 
@@ -63,11 +63,11 @@ class CheckoutView(View):
                 order_items.update(ordered=True)
                 for item in order_items:
                     item.save()
+                    order.totalprice += Order.get_total(order)
 
                 order.User = userprofile
                 order.ordered = True
                 order.ref_code = create_ref_code()
-
 
                 if envio_option == 'W':
                     order.envio_option = 'Whatsapp'
@@ -98,16 +98,9 @@ class FaleConosco(ListView):
     template_name = "fale_conosco.html"
 
 class PedAnteriores(ListView):
-    def get(self, *args, **kwargs):
-        try:
-            order = Order.objects.filter(user=self.request.user, ordered=True)
-            context = {
-                'object': order
-            }
-            return render(self.request, 'pedidosanteriores.html', context)
-        except ObjectDoesNotExist:
-            messages.warning(self.request, "Não existem pedidos")
-            return redirect("/")
+    model = Order
+    paginate_by = 10
+    template_name = "pedidosanteriores.html"
 
 class OrderSummaryView(LoginRequiredMixin, View):
     def get(self, *args, **kwargs):
@@ -214,3 +207,10 @@ def remove_single_item_from_cart(request, slug):
     else:
         messages.info(request, "Você não tem um pedido ativo")
         return redirect("core:product", slug=slug)
+
+@login_required
+def account(request):
+    my_orders = Order.objects.filter(user=request.user)
+    order_items = OrderItem.objects.all()
+    return render(request, "pedidosanteriores.html",
+                  {"my_orders": my_orders, "order_items": order_items})
