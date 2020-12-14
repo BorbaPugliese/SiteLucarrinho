@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d7362bf2-d4cb-4a7d-8b2a-d8a9c5adb6d8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1lbuMdVBrT2tQYN6GX5PvrKo89s" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\giuli\PycharmProjects\django-ecommerce-master\templates" />
+      <recent name="C:\Users\giuli\PycharmProjects\django-ecommerce-master\static_in_env" />
+      <recent name="C:\Users\giuli\PycharmProjects\django-ecommerce-master\static_in_env\js" />
+      <recent name="C:\Users\giuli\PycharmProjects\django-ecommerce-master\static_in_env\img" />
+      <recent name="C:\Users\giuli\PycharmProjects\django-ecommerce-master" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="showServicesTree" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d7362bf2-d4cb-4a7d-8b2a-d8a9c5adb6d8" name="Default Changelist" comment="" />
+      <created>1607878064864</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607878064864</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="442" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607879446601">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="442" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607879446601" />
+    <state x="110" y="120" width="1146" height="488" key="DiffContextDialog" timestamp="1607902680462">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="110" y="120" width="1146" height="488" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1607902680462" />
+    <state x="184" y="7" key="SettingsEditor" timestamp="1607878932764">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607878932764" />
+    <state x="110" y="120" width="1146" height="488" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1607903181582">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="110" y="120" width="1146" height="488" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1607903181582" />
+    <state x="110" y="120" width="1146" height="488" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1607901763165">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="110" y="120" width="1146" height="488" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1607901763165" />
+    <state x="629" y="95" width="737" height="606" key="find.popup" timestamp="1607910333781">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="629" y="95" width="737" height="606" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1607910333781" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607895922717">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1607895922717" />
+  </component>
+</project>

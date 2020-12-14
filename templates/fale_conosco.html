@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<main>
+
+    <center>
+    <div class="faleconosco_topo">
+      <h2>Nossa história</h2>
+      <p>Somos um grupo de estudantes de Engenharia Mecatrônica da POLI-USP querendo ajudar vocês a escolherem o melhor mercado para fazer as compras!!</p>
+    </div>
+
+    <div id="carometro">
+
+      <h2>Nossos contatos</h2>
+
+      <div class="carometro2">
+      <div class="moldura">
+        <img src="{% static 'img/foto_giulia.jpg' %}" width="50%" height="50%">
+        <div>
+          <p>Giulia Duo Cardella</p>
+          <p>giulia.cardella@usp.br</p>
+        </div>
+      </div>
+
+      <div class="moldura">
+        <img src="{% static 'img/foto_borba.jpg' %}" width="50%" height="50%">
+        <div>
+          <p>Lucas Borba Pugliese Ribeiro</p>
+          <p>baymax@usp.br</p>
+        </div>
+      </div>
+
+    </div>
+
+      <div class="carometro2">
+
+      <div class="moldura">
+        <img src="{% static 'img/foto_luca.jpg' %}" width="50%" height="50%">
+        <div>
+          <p>Luca Miguel Rodrigues</p>
+          <p>luca.miguel@usp.br</p>
+        </div>
+      </div>
+
+      <div class="moldura">
+        <img src="{% static 'img/foto_vini.jpg' %}" width="50%" height="50%">
+        <div>
+          <p>Vinicius Del Manto Cavalcante</p>
+          <p>vinidmc@usp.br</p>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+     </center>
+
+    </main>
+{% endblock content %}
